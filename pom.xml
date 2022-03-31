@@ -98,7 +98,7 @@
 
 	</dependencies>
 	
-	<!-- <distributionManagement>
+	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
 	      <name>Wallmart release repo </name>
@@ -109,7 +109,7 @@
 	      <name>wallmart snapshot repo </name>
 	      <url>http://52.66.63.38:8081/repository/wallmart-snapshot/</url>
 	    </snapshotRepository>
-	</distributionManagement> -->
+	</distributionManagement> 
 	
 	<build>
 		<plugins>
