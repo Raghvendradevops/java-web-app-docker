@@ -19,7 +19,6 @@
 
 	<properties>
 		<!-- versions -->
-		
 		<sonar.host.url>http://http://13.232.253.204:9000/</sonar.host.url>
                 <sonar.login>admin</sonar.login>
                 <sonar.password>admin</sonar.password>
