@@ -1,0 +1,57 @@
+//declarative 
+
+pipeline
+{
+
+agent any
+
+tools{
+maven 'maven3.8.5'
+}
+
+stages{
+
+    stage ('chekout code') {
+	steps {
+	git credentialsId: '0ab30df4-3af0-49ff-a23b-4b3053921029', url: 'https://github.com/Raghvendradevops/java-web-app-docker.git'
+	
+	}
+	
+	
+	}
+	
+	stage ('build a package') {
+	   steps{
+	   
+	   sh "mvn clean package"
+	   }
+	
+	}
+	
+	
+	stage ('deploy to nexus') {
+	
+	   steps{
+	   
+	   sh "mvn deploy"
+	   
+	   }
+	}
+	
+	/*
+	stage ('deploy to the production') {
+       steps {
+      sshagent(['93691780-b977-4741-a657-dbc3b9f6c8e2']){
+	  sh "scp -o StrictHostkeyChecking=no target/java-web-app-1.0.war ec2-user@15.206.89.197:/opt/apache-tomcat-9.0.60/webapps/"
+
+    }	   
+	
+	}
+	
+	
+}
+
+*/
+}
+
+}
